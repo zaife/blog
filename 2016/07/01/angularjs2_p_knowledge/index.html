@@ -97,10 +97,7 @@ core-js
 rxjs
 SystemJS
 reflect-metadata
-gulp
-Angular-CLI
-
-Node.js  简单的说 Nod">
+Angular-CLI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AngularJS 2 预备知识">
 <meta property="og:url" content="http://zaife.me/2016/07/01/angularjs2_p_knowledge/index.html">
@@ -116,11 +113,8 @@ core-js
 rxjs
 SystemJS
 reflect-metadata
-gulp
-Angular-CLI
-
-Node.js  简单的说 Nod">
-<meta property="og:updated_time" content="2016-07-04T10:09:08.000Z">
+Angular-CLI">
+<meta property="og:updated_time" content="2016-07-04T14:37:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS 2 预备知识">
 <meta name="twitter:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
@@ -134,10 +128,7 @@ core-js
 rxjs
 SystemJS
 reflect-metadata
-gulp
-Angular-CLI
-
-Node.js  简单的说 Nod">
+Angular-CLI">
 
 
 
@@ -386,9 +377,9 @@ Node.js  简单的说 Nod">
 <li>rxjs</li>
 <li>SystemJS</li>
 <li>reflect-metadata</li>
-<li>gulp</li>
 <li>Angular-CLI</li>
 </ul>
+<a id="more"></a>
 <h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>  简单的说 Node.js 就是运行在服务端的 JavaScript。Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
 <p>  学习资料：</p>
 <ul>
@@ -423,7 +414,37 @@ Node.js  简单的说 Nod">
 <li><a href="https://github.com/angular/zone.js/" target="_blank" rel="external">GitHub</a></li>
 <li><a href="http://www.cnblogs.com/whitewolf/p/zone-js.html" target="_blank" rel="external">zone.js - 暴力之美</a></li>
 </ul>
-<h3 id="core-js"><a href="#core-js" class="headerlink" title="core-js"></a>core-js</h3><h3 id="rxjs"><a href="#rxjs" class="headerlink" title="rxjs"></a>rxjs</h3><h3 id="SystemJS"><a href="#SystemJS" class="headerlink" title="SystemJS"></a>SystemJS</h3><h3 id="reflect-metadata"><a href="#reflect-metadata" class="headerlink" title="reflect-metadata"></a>reflect-metadata</h3><h3 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h3><h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3>
+<h3 id="core-js"><a href="#core-js" class="headerlink" title="core-js"></a>core-js</h3><p>monkey patches the global context (window) with essential features of ES2015 (ES6). Developers may substitute an alternative polyfill that provides the same core APIs. This dependency should go away once these APIs are implemented by all supported ever-green browsers.</p>
+<p>Modular standard library for JavaScript. Includes polyfills for ECMAScript 5, ECMAScript 6: promises, symbols, collections, iterators, typed arrays, ECMAScript 7+ proposals, setImmediate, etc. Some additional features such as dictionaries or extended partial application. You can require only needed features or use it without global namespace pollution.</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/core-js" target="_blank" rel="external">npm</a></li>
+<li><a href="https://github.com/zloirock/core-js" target="_blank" rel="external">GitHub</a></li>
+</ul>
+<h3 id="rxjs"><a href="#rxjs" class="headerlink" title="rxjs"></a>rxjs</h3><p>a polyfill for the Observables specification currently before the TC39 committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of rxjs (within a compatible version range) without waiting for Angular updates.</p>
+<p>Reactive Extensions Library for JavaScript. This is a rewrite of Reactive-Extensions/RxJS and is intended to supersede it once this is ready. This rewrite is meant to have better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface.</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/rxjs" target="_blank" rel="external">npm</a></li>
+<li><a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="external">GitHub</a></li>
+</ul>
+<h3 id="SystemJS"><a href="#SystemJS" class="headerlink" title="SystemJS"></a>SystemJS</h3><p>A dynamic module loader compatible with the ES2015 module specification. There are other viable choices including the well-regarded webpack.</p>
+<p>Universal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS. Works with both Traceur and Babel.</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/systemjs" target="_blank" rel="external">npm</a></li>
+<li><a href="https://github.com/systemjs" target="_blank" rel="external">GitHub</a></li>
+</ul>
+<h3 id="reflect-metadata"><a href="#reflect-metadata" class="headerlink" title="reflect-metadata"></a>reflect-metadata</h3><p>a dependency shared between Angular and the TypeScript compiler. Developers should be able to update a TypeScript package without upgrading Angular, which is why this is a dependency of the application and not a dependency of Angular.</p>
+<p>Proposal to add Decorators to ES7, along with a prototype for an ES7 Reflection API for Decorator Metadata</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/reflect-metadata" target="_blank" rel="external">npm</a></li>
+<li><a href="https://github.com/rbuckton/ReflectDecorators" target="_blank" rel="external">GitHub</a></li>
+</ul>
+<h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3><p>Prototype of a CLI for Angular 2 applications based on the ember-cli project.</p>
+<ul>
+<li><a href="https://github.com/angular/angular-cli" target="_blank" rel="external">GitHub</a></li>
+</ul>
+<p>注: 术语 polyfill 来自于一个家装产品Polyfilla:</p>
+<p>Polyfilla 是一个英国产品，在美国称之为 Spackling Paste (刮墙的,在中国称为腻子)。记住这一点就行: 把旧的浏览器想象成为一面有了裂缝的墙.这些 polyfill 会帮助我们把这面墙的裂缝抹平,还我们一个更好的光滑的墙壁 (浏览器)</p>
+
       
     </div>
 
@@ -617,7 +638,7 @@ Node.js  简单的说 Nod">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPM"><span class="nav-number">2.</span> <span class="nav-text">NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">3.</span> <span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeScript"><span class="nav-number">4.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zone-js"><span class="nav-number">5.</span> <span class="nav-text">Zone.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core-js"><span class="nav-number">6.</span> <span class="nav-text">core-js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rxjs"><span class="nav-number">7.</span> <span class="nav-text">rxjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SystemJS"><span class="nav-number">8.</span> <span class="nav-text">SystemJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reflect-metadata"><span class="nav-number">9.</span> <span class="nav-text">reflect-metadata</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gulp"><span class="nav-number">10.</span> <span class="nav-text">gulp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-CLI"><span class="nav-number">11.</span> <span class="nav-text">Angular-CLI</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPM"><span class="nav-number">2.</span> <span class="nav-text">NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">3.</span> <span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeScript"><span class="nav-number">4.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zone-js"><span class="nav-number">5.</span> <span class="nav-text">Zone.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core-js"><span class="nav-number">6.</span> <span class="nav-text">core-js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rxjs"><span class="nav-number">7.</span> <span class="nav-text">rxjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SystemJS"><span class="nav-number">8.</span> <span class="nav-text">SystemJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reflect-metadata"><span class="nav-number">9.</span> <span class="nav-text">reflect-metadata</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-CLI"><span class="nav-number">10.</span> <span class="nav-text">Angular-CLI</span></a></li></ol></div>
             
           </div>
         </section>
