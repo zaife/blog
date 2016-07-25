@@ -86,49 +86,22 @@
 
 
 
-<meta name="description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
+<meta name="description" content="Angular 有一些自己的专业词汇，大部分Angular 2术语都是在Angular系统中有特殊意义的日常英语单词。
+中文版地址
+https://angular.cn/docs/ts/latest/glossary.html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS 2 预备知识">
-<meta property="og:url" content="http://zaife.me/2016/07/01/angularjs2_p_knowledge/index.html">
+<meta property="og:title" content="Angular 2 架构设计">
+<meta property="og:url" content="http://zaife.me/2016/07/12/angular_glossary/index.html">
 <meta property="og:site_name" content="zaife的博客">
-<meta property="og:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
-<meta property="og:updated_time" content="2016-07-04T14:43:12.000Z">
+<meta property="og:description" content="Angular 有一些自己的专业词汇，大部分Angular 2术语都是在Angular系统中有特殊意义的日常英语单词。
+中文版地址
+https://angular.cn/docs/ts/latest/glossary.html">
+<meta property="og:updated_time" content="2016-07-12T03:35:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS 2 预备知识">
-<meta name="twitter:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
+<meta name="twitter:title" content="Angular 2 架构设计">
+<meta name="twitter:description" content="Angular 有一些自己的专业词汇，大部分Angular 2术语都是在Angular系统中有特殊意义的日常英语单词。
+中文版地址
+https://angular.cn/docs/ts/latest/glossary.html">
 
 
 
@@ -149,9 +122,9 @@ Angular-CLI">
 
 
 
-  <link rel="canonical" href="http://zaife.me/2016/07/01/angularjs2_p_knowledge/"/>
+  <link rel="canonical" href="http://zaife.me/2016/07/12/angular_glossary/"/>
 
-  <title> AngularJS 2 预备知识 | zaife的博客 </title>
+  <title> Angular 2 架构设计 | zaife的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -300,7 +273,7 @@ Angular-CLI">
             
             
               
-                AngularJS 2 预备知识
+                Angular 2 架构设计
               
             
           </h1>
@@ -312,8 +285,8 @@ Angular-CLI">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T00:00:00+08:00" content="2016-07-01">
-              2016-07-01
+            <time itemprop="dateCreated" datetime="2016-07-12T00:00:00+08:00" content="2016-07-12">
+              2016-07-12
             </time>
           </span>
 
@@ -342,8 +315,8 @@ Angular-CLI">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/01/angularjs2_p_knowledge/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/angularjs2_p_knowledge/" itemprop="commentsCount"></span>
+                <a href="/2016/07/12/angular_glossary/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/12/angular_glossary/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -366,85 +339,9 @@ Angular-CLI">
       
 
       
-        <p>AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：</p>
-<ul>
-<li>node</li>
-<li>npm</li>
-<li>ES6</li>
-<li>TypeScript </li>
-<li>Zone.js</li>
-<li>core-js</li>
-<li>rxjs</li>
-<li>SystemJS</li>
-<li>reflect-metadata</li>
-<li>Angular-CLI</li>
-</ul>
-<a id="more"></a>
-<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>  简单的说 Node.js 就是运行在服务端的 JavaScript。Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
-<p>  学习资料：</p>
-<ul>
-<li><a href="https://nodejs.org/" target="_blank" rel="external">官网</a></li>
-<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-tutorial.html</a></li>
-</ul>
-<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><p>npm（node package manager），是node.js的一个包管理器，用于第三方模块的下载、安装和管理。</p>
-<p>npm收录着庞大而丰富的第三方资源，截至目前为止已经收录了220102个包。npm之于node.js，其重要程度可比maven与java、pip与python。</p>
-<ul>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="external">官网</a></li>
-<li><a href="https://github.com/npm/npm" target="_blank" rel="external">Github</a></li>
-</ul>
-<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><p>ECMAScript 6（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。Mozilla 公司将在这个标准的基础上，推出 JavaScript 2.0。</p>
-<p>ES6 的目标，是使得 JavaScript 语言可以用来编写大型的复杂的应用程序，成为企业级开发语言。</p>
-<p>ECMAScript 和 JavaScript 的关系<br>很多初学者会感到困惑：ECMAScript 和 JavaScript 到底是什么关系？简单说，ECMAScript 是 JavaScript 语言的国际标准，JavaScript 是 ECMAScript 的实现。</p>
-<p>要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给国际标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript。这个版本就是 ECMAScript 1.0 版。</p>
-<p>之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现。在日常场合，这两个词是可以互换的。</p>
-<ul>
-<li><a href="ECMAScript 6入门">ECMAScript 6入门(阮一峰)</a></li>
-<li><a href="http://es6-features.org/#Constants" target="_blank" rel="external">特性</a></li>
-<li><a href="http://www.infoq.com/cn/ES6-In-Depth" target="_blank" rel="external">InofQ-深入浅出ES6</a></li>
-</ul>
-<h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><p>TypeScript是Microsoft公司注册商标。<br>TypeScript具有类型系统，且是JavaScript的超集。 它可以编译成普通的JavaScript代码。 TypeScript支持任意浏览器，任意环境，任意系统并且是开源的。</p>
-<p>AngularJS 2采用TypeScript开发，并在TypeScript基础上设计了一些特性，简化Angularjs 的开发。</p>
-<ul>
-<li><a href="https://www.typescriptlang.org/" target="_blank" rel="external">官网</a></li>
-<li><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/" target="_blank" rel="external">中文教程</a></li>
-</ul>
-<h3 id="Zone-js"><a href="#Zone-js" class="headerlink" title="Zone.js"></a>Zone.js</h3><p>在ng2的开发过程中，Angular团队为我们带来了一个新的库 – zone.js。zone.js的设计灵感来源于Dart语言，它描述JavaScript执行过程的上下文，可以在异步任务之间进行持久性传递，它类似于Java中的TLS（thread-local storage: 线程本地存储）技术，zone.js则是将TLS引入到JavaScript语言中的实现框架。</p>
-<p>a polyfill for the <a href="https://gist.github.com/mhevery/63fdcdf7c65886051d55" target="_blank" rel="external">Zone specification</a> currently before the <a href="http://www.ecma-international.org/memento/TC39.htm" target="_blank" rel="external">TC39</a> committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of zone.js to use (within a compatible version range) without waiting for Angular updates.</p>
-<ul>
-<li><a href="https://github.com/angular/zone.js/" target="_blank" rel="external">GitHub</a></li>
-<li><a href="http://www.cnblogs.com/whitewolf/p/zone-js.html" target="_blank" rel="external">zone.js - 暴力之美</a></li>
-</ul>
-<h3 id="core-js"><a href="#core-js" class="headerlink" title="core-js"></a>core-js</h3><p>monkey patches the global context (window) with essential features of ES2015 (ES6). Developers may substitute an alternative polyfill that provides the same core APIs. This dependency should go away once these APIs are implemented by all supported ever-green browsers.</p>
-<p>Modular standard library for JavaScript. Includes polyfills for ECMAScript 5, ECMAScript 6: promises, symbols, collections, iterators, typed arrays, ECMAScript 7+ proposals, setImmediate, etc. Some additional features such as dictionaries or extended partial application. You can require only needed features or use it without global namespace pollution.</p>
-<ul>
-<li><a href="https://www.npmjs.com/package/core-js" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/zloirock/core-js" target="_blank" rel="external">GitHub</a></li>
-</ul>
-<h3 id="rxjs"><a href="#rxjs" class="headerlink" title="rxjs"></a>rxjs</h3><p>a polyfill for the Observables specification currently before the TC39 committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of rxjs (within a compatible version range) without waiting for Angular updates.</p>
-<p>Reactive Extensions Library for JavaScript. This is a rewrite of Reactive-Extensions/RxJS and is intended to supersede it once this is ready. This rewrite is meant to have better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface.</p>
-<ul>
-<li><a href="https://www.npmjs.com/package/rxjs" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="external">GitHub</a></li>
-</ul>
-<h3 id="SystemJS"><a href="#SystemJS" class="headerlink" title="SystemJS"></a>SystemJS</h3><p>A dynamic module loader compatible with the ES2015 module specification. There are other viable choices including the well-regarded webpack.</p>
-<p>Universal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS. Works with both Traceur and Babel.</p>
-<ul>
-<li><a href="https://www.npmjs.com/package/systemjs" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/systemjs" target="_blank" rel="external">GitHub</a></li>
-</ul>
-<h3 id="reflect-metadata"><a href="#reflect-metadata" class="headerlink" title="reflect-metadata"></a>reflect-metadata</h3><p>a dependency shared between Angular and the TypeScript compiler. Developers should be able to update a TypeScript package without upgrading Angular, which is why this is a dependency of the application and not a dependency of Angular.</p>
-<p>Proposal to add Decorators to ES7, along with a prototype for an ES7 Reflection API for Decorator Metadata</p>
-<ul>
-<li><a href="https://www.npmjs.com/package/reflect-metadata" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/rbuckton/ReflectDecorators" target="_blank" rel="external">GitHub</a></li>
-</ul>
-<h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3><p>Prototype of a CLI for Angular 2 applications based on the ember-cli project.</p>
-<p>angular 2应用工具，可以生成项目、打包、启动、测试等。</p>
-<ul>
-<li><a href="https://github.com/angular/angular-cli" target="_blank" rel="external">GitHub</a></li>
-</ul>
-<p>注: 术语 polyfill 来自于一个家装产品Polyfilla:</p>
-<p>Polyfilla 是一个英国产品，在美国称之为 Spackling Paste (刮墙的,在中国称为腻子)。记住这一点就行: 把旧的浏览器想象成为一面有了裂缝的墙.这些 polyfill 会帮助我们把这面墙的裂缝抹平,还我们一个更好的光滑的墙壁 (浏览器)</p>
+        <p>Angular 有一些自己的专业词汇，大部分Angular 2术语都是在Angular系统中有特殊意义的日常英语单词。</p>
+<p>中文版地址</p>
+<p><a href="https://angular.cn/docs/ts/latest/glossary.html" target="_blank" rel="external">https://angular.cn/docs/ts/latest/glossary.html</a></p>
 
       
     </div>
@@ -477,16 +374,16 @@ Angular-CLI">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/02/05/stringbuild-err/" rel="next" title="由StringBuilder未及时清除导致MapReduce执行卡住的问题">
-                <i class="fa fa-chevron-left"></i> 由StringBuilder未及时清除导致MapReduce执行卡住的问题
+              <a href="/2016/07/11/angular2_arch/" rel="next" title="Angular 2 架构设计">
+                <i class="fa fa-chevron-left"></i> Angular 2 架构设计
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/07/angular2_pro_stuct/" rel="prev" title="Angular 2 项目结构">
-                Angular 2 项目结构 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/22/ansible_intro/" rel="prev" title="Ansible介绍">
+                Ansible介绍 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -643,7 +540,7 @@ Angular-CLI">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPM"><span class="nav-number">2.</span> <span class="nav-text">NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">3.</span> <span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeScript"><span class="nav-number">4.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zone-js"><span class="nav-number">5.</span> <span class="nav-text">Zone.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core-js"><span class="nav-number">6.</span> <span class="nav-text">core-js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rxjs"><span class="nav-number">7.</span> <span class="nav-text">rxjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SystemJS"><span class="nav-number">8.</span> <span class="nav-text">SystemJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reflect-metadata"><span class="nav-number">9.</span> <span class="nav-text">reflect-metadata</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-CLI"><span class="nav-number">10.</span> <span class="nav-text">Angular-CLI</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
@@ -763,9 +660,9 @@ Angular-CLI">
 
     <script type="text/javascript">
       var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/01/angularjs2_p_knowledge/';
-      var disqus_title = "AngularJS 2 预备知识";
-      var disqus_url = 'http://zaife.me/2016/07/01/angularjs2_p_knowledge/';
+      var disqus_identifier = '2016/07/12/angular_glossary/';
+      var disqus_title = "Angular 2 架构设计";
+      var disqus_url = 'http://zaife.me/2016/07/12/angular_glossary/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
