@@ -93,7 +93,8 @@
 <meta property="og:site_name" content="zaife的博客">
 <meta property="og:description" content="Ansible 是一个配置管理和应用部署工具，功能类似于目前业界的配置管理工具 Chef,Puppet,Saltstack。Ansible 是通过 Python 语言开发。Ansible 平台由 Michael DeHaan 创建，他同时也是知名软件 Cobbler 与 Func 的作者。Ansible 的第一个版本发布于 2012 年 2 月。Ansible 默认通过 SSH 协议管理机器，所以">
 <meta property="og:image" content="http://zaife.me/2016/07/22/ansible_intro/ANSIBLE_DIAGRAM.jpg">
-<meta property="og:updated_time" content="2016-07-25T03:11:00.000Z">
+<meta property="og:image" content="http://zaife.me/2016/07/22/ansible_intro/ansible_arch.png">
+<meta property="og:updated_time" content="2016-07-25T03:28:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible介绍">
 <meta name="twitter:description" content="Ansible 是一个配置管理和应用部署工具，功能类似于目前业界的配置管理工具 Chef,Puppet,Saltstack。Ansible 是通过 Python 语言开发。Ansible 平台由 Michael DeHaan 创建，他同时也是知名软件 Cobbler 与 Func 的作者。Ansible 的第一个版本发布于 2012 年 2 月。Ansible 默认通过 SSH 协议管理机器，所以">
@@ -343,9 +344,26 @@
 <li>自动化的（AWS）云服务管理。</li>
 </ul>
 <p>根据 Ansible 官方提供的信息，当前使用 Ansible 的用户有：evernote、rackspace、NASA、Atlassian、twitter 等。</p>
-<p>###Ansible 架构</p>
-<p>Ansible架构图如下：</p>
+<h3 id="Ansible-架构"><a href="#Ansible-架构" class="headerlink" title="Ansible 架构"></a>Ansible 架构</h3><p>Ansible架构图如下：</p>
 <img src="/2016/07/22/ansible_intro/ANSIBLE_DIAGRAM.jpg" alt="ANSIBLE_DIAGRAM.jpg" title="">
+<p>从图上可以看到Ansible的主要构成：</p>
+<ul>
+<li>Inventory 定义ansible管理的主机</li>
+<li>Modules 分为核心模块和扩展自定义模块</li>
+<li>Plugins 插件，如connection Plugin</li>
+<li>Playbook ansible的任务配置文件，将多个任务定义在剧本中，由ansible自动执行</li>
+<li>API ansible API可以开发或调用</li>
+<li>Hosts ansible node节点</li>
+<li>Networking 网络</li>
+</ul>
+<p>Ansible支持local 、ssh、zeromq 三种方式连接被管理端，默认使用基于ssh的连接。</p>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><img src="/2016/07/22/ansible_intro/ansible_arch.png" alt="ansible_arch.png" title="">
+<ul>
+<li>管理端支持 local/ssh/zeromq 三种方式连接被管理端，默认使用基于ssh的连接，这部分对应基本架构图中的连接模块。</li>
+<li>可以按应用类型等方式进行Host Invetory分类，管理节点通过各类模块实现相应的操作。[单个模块、单条命令的批量执行，我们可以称之为ad-hoc。]</li>
+<li>管理节点可以通过playbooks实现多个task的集合实现一类功能，如web服务的安装部署、数据库服务器的批量备份等。playbooks我们可以简单的理解为：系统通过组合多条ad-hoc操作的配置文件。</li>
+</ul>
+
       
     </div>
 
@@ -539,7 +557,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible-架构"><span class="nav-number">1.</span> <span class="nav-text">Ansible 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li></ol></div>
             
           </div>
         </section>
