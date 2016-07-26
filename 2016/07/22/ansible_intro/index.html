@@ -94,7 +94,7 @@
 <meta property="og:description" content="Ansible 是一个配置管理和应用部署工具，功能类似于目前业界的配置管理工具 Chef,Puppet,Saltstack。Ansible 是通过 Python 语言开发。Ansible 平台由 Michael DeHaan 创建，他同时也是知名软件 Cobbler 与 Func 的作者。Ansible 的第一个版本发布于 2012 年 2 月。Ansible 默认通过 SSH 协议管理机器，所以">
 <meta property="og:image" content="http://zaife.me/2016/07/22/ansible_intro/ANSIBLE_DIAGRAM.jpg">
 <meta property="og:image" content="http://zaife.me/2016/07/22/ansible_intro/ansible_arch_overview.png">
-<meta property="og:updated_time" content="2016-07-25T08:06:26.000Z">
+<meta property="og:updated_time" content="2016-07-26T02:34:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible介绍">
 <meta name="twitter:description" content="Ansible 是一个配置管理和应用部署工具，功能类似于目前业界的配置管理工具 Chef,Puppet,Saltstack。Ansible 是通过 Python 语言开发。Ansible 平台由 Michael DeHaan 创建，他同时也是知名软件 Cobbler 与 Func 的作者。Ansible 的第一个版本发布于 2012 年 2 月。Ansible 默认通过 SSH 协议管理机器，所以">
@@ -354,7 +354,7 @@
 <li>Playbook ansible的任务配置文件，将多个任务定义在剧本中，由ansible自动执行</li>
 <li>API ansible API可以开发或调用</li>
 <li>Hosts ansible node节点</li>
-<li>Networking 网络</li>
+<li>Networking 网络设备</li>
 </ul>
 <p>Ansible支持local 、ssh、zeromq 三种方式连接被管理端，默认使用基于ssh的连接。</p>
 <a id="more"></a>
@@ -398,7 +398,22 @@
 <p>pip install git+git://github.com/ansible/ansible.git@devel<br>If you are installing on OS X Mavericks, you may encounter some noise from your compiler. A workaround is to do the following:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install ansible</span><br></pre></td></tr></table></figure>
 <p>Readers that use virtualenv can also install Ansible under virtualenv, though we’d recommend to not worry about it and just install Ansible globally. Do not use easy_install to install ansible directly.</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="Mac环境安装完成后，执行ansible-h报错"><a href="#Mac环境安装完成后，执行ansible-h报错" class="headerlink" title="Mac环境安装完成后，执行ansible -h报错"></a>Mac环境安装完成后，执行ansible -h报错</h4><pre><code>➜  python ansible -h
+ERROR! Unexpected Exception: (setuptools 1.1.6 (/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python), Requirement.parse(&apos;setuptools&gt;=11.3&apos;))
+the full traceback was:
 
+Traceback (most recent call last):
+  File &quot;/usr/local/bin/ansible&quot;, line 81, in &lt;module&gt;
+    from ansible.cli.adhoc import AdHocCLI as mycli
+  File &quot;/Library/Python/2.7/site-packages/ansible/cli/adhoc.py&quot;, line 28, in &lt;module&gt;
+    from ansible.executor.task_queue_manager import TaskQueueManager
+  File &quot;/Library/Python/2.7/site-packages/ansible/executor/task_queue_manager.py&quot;, line 28, in &lt;module&gt;
+    from ansible.executor.play_iterator import PlayIterator
+  File &quot;/Library/Python/2.7/site-packages/ansible/executor/play_
+</code></pre><p>解决办法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade setuptools --user python</span><br></pre></td></tr></table></figure>
+<pre><code>http://stackoverflow.com/questions/36958125/ansible-roles-packages-ansible-galaxy-error-on-instalation-mac-osx
+</code></pre>
       
     </div>
 
@@ -592,7 +607,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible-架构"><span class="nav-number">1.</span> <span class="nav-text">Ansible 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制服务器要求"><span class="nav-number">3.1.</span> <span class="nav-text">控制服务器要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被管理node端要求"><span class="nav-number">3.2.</span> <span class="nav-text">被管理node端要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制端安装"><span class="nav-number">3.3.</span> <span class="nav-text">控制端安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#源码安装"><span class="nav-number">3.3.1.</span> <span class="nav-text">源码安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#yum安装"><span class="nav-number">3.3.2.</span> <span class="nav-text">yum安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Latest-Releases-Via-Pip"><span class="nav-number">3.3.3.</span> <span class="nav-text">Latest Releases Via Pip</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible-架构"><span class="nav-number">1.</span> <span class="nav-text">Ansible 架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作原理"><span class="nav-number">2.</span> <span class="nav-text">工作原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#控制服务器要求"><span class="nav-number">3.1.</span> <span class="nav-text">控制服务器要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被管理node端要求"><span class="nav-number">3.2.</span> <span class="nav-text">被管理node端要求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制端安装"><span class="nav-number">3.3.</span> <span class="nav-text">控制端安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#源码安装"><span class="nav-number">3.3.1.</span> <span class="nav-text">源码安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#yum安装"><span class="nav-number">3.3.2.</span> <span class="nav-text">yum安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Latest-Releases-Via-Pip"><span class="nav-number">3.3.3.</span> <span class="nav-text">Latest Releases Via Pip</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">4.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac环境安装完成后，执行ansible-h报错"><span class="nav-number">4.1.</span> <span class="nav-text">Mac环境安装完成后，执行ansible -h报错</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
