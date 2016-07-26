@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AngularJS 2,Node," />
+  <meta name="keywords" content="ssh," />
 
 
 
@@ -86,60 +86,28 @@
 
 
 
-<meta name="description" content="Angular 2架构如下图：
-
-Angular 2主要有以下部分
-
-Module
-Component
-Template
-Metadata
-Data Binding
-Directive
-Service
-Dependency Injection
-
-原文
-中文版">
+<meta name="description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
+为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
+ssh-keygen创建密钥1$ ssh-keygen
+以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
+运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular 2 架构设计">
-<meta property="og:url" content="http://zaife.me/2016/07/11/angular2_arch/index.html">
+<meta property="og:title" content="ssh 无密码登录">
+<meta property="og:url" content="http://zaife.me/2016/07/26/ssh_no_pass/index.html">
 <meta property="og:site_name" content="zaife的博客">
-<meta property="og:description" content="Angular 2架构如下图：
-
-Angular 2主要有以下部分
-
-Module
-Component
-Template
-Metadata
-Data Binding
-Directive
-Service
-Dependency Injection
-
-原文
-中文版">
-<meta property="og:image" content="http://zaife.me/images/ang2_overview2.png">
-<meta property="og:updated_time" content="2016-07-12T06:12:07.000Z">
+<meta property="og:description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
+为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
+ssh-keygen创建密钥1$ ssh-keygen
+以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
+运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
+<meta property="og:updated_time" content="2016-07-26T06:22:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular 2 架构设计">
-<meta name="twitter:description" content="Angular 2架构如下图：
-
-Angular 2主要有以下部分
-
-Module
-Component
-Template
-Metadata
-Data Binding
-Directive
-Service
-Dependency Injection
-
-原文
-中文版">
-<meta name="twitter:image" content="http://zaife.me/images/ang2_overview2.png">
+<meta name="twitter:title" content="ssh 无密码登录">
+<meta name="twitter:description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
+为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
+ssh-keygen创建密钥1$ ssh-keygen
+以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
+运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
 
 
 
@@ -160,9 +128,9 @@ Dependency Injection
 
 
 
-  <link rel="canonical" href="http://zaife.me/2016/07/11/angular2_arch/"/>
+  <link rel="canonical" href="http://zaife.me/2016/07/26/ssh_no_pass/"/>
 
-  <title> Angular 2 架构设计 | zaife的博客 </title>
+  <title> ssh 无密码登录 | zaife的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +279,7 @@ Dependency Injection
             
             
               
-                Angular 2 架构设计
+                ssh 无密码登录
               
             
           </h1>
@@ -323,8 +291,8 @@ Dependency Injection
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-11T00:00:00+08:00" content="2016-07-11">
-              2016-07-11
+            <time itemprop="dateCreated" datetime="2016-07-26T00:00:00+08:00" content="2016-07-26">
+              2016-07-26
             </time>
           </span>
 
@@ -337,8 +305,8 @@ Dependency Injection
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/AngularJS-2/" itemprop="url" rel="index">
-                    <span itemprop="name">AngularJS 2</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -353,8 +321,8 @@ Dependency Injection
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/11/angular2_arch/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/11/angular2_arch/" itemprop="commentsCount"></span>
+                <a href="/2016/07/26/ssh_no_pass/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/26/ssh_no_pass/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -377,21 +345,20 @@ Dependency Injection
       
 
       
-        <p>Angular 2架构如下图：</p>
-<p><img src="/images/ang2_overview2.png" alt=""></p>
-<p>Angular 2主要有以下部分</p>
-<ol>
-<li>Module</li>
-<li>Component</li>
-<li>Template</li>
-<li>Metadata</li>
-<li>Data Binding</li>
-<li>Directive</li>
-<li>Service</li>
-<li>Dependency Injection</li>
-</ol>
-<p><a href="https://angular.io/docs/ts/latest/guide/architecture.html" target="_blank" rel="external">原文</a></p>
-<p><a href="https://angular.cn/docs/ts/latest/guide/architecture.html" target="_blank" rel="external">中文版</a></p>
+        <p>SSH有两种验证方式，一种是基于密码，一种是基于密钥。</p>
+<p>为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。</p>
+<h3 id="ssh-keygen创建密钥"><a href="#ssh-keygen创建密钥" class="headerlink" title="ssh-keygen创建密钥"></a>ssh-keygen创建密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br></pre></td></tr></table></figure>
+<p>以上命令等价于 ssh-keygen -t rsa<br>-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa</p>
+<p>运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，可以设置一个。运行结束以后，会在 ~/.ssh/ 目录下新生成两个文件：id_rsa.pub和id_rsa。前者公钥，后者是私钥。也可以指定路径。</p>
+<h3 id="上传公钥"><a href="#上传公钥" class="headerlink" title="上传公钥"></a>上传公钥</h3><p>可以通过scp命令上传公钥到远程服务器，并写入authorized_keys文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  scp id_rsa.pub root@hosts:~/tt_key</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat tt_key &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<p>也可以通过ssh-copy-id命令(openSSH)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-copy-id user@host</span><br></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>.ssh 目录权限一定要为700</p>
+<p>authorized_keys文件权限为600</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.csdn.net/wangjunjun2008/article/details/20037101" target="_blank" rel="external">http://blog.csdn.net/wangjunjun2008/article/details/20037101</a><br><a href="http://blog.csdn.net/leexide/article/details/17252369" target="_blank" rel="external">http://blog.csdn.net/leexide/article/details/17252369</a></p>
+<p><a href="https://www.linuxdashen.com/ssh-key%EF%BC%9A%E4%B8%A4%E4%B8%AA%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0ssh%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95" target="_blank" rel="external">https://www.linuxdashen.com/ssh-key%EF%BC%9A%E4%B8%A4%E4%B8%AA%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0ssh%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95</a></p>
 
       
     </div>
@@ -413,9 +380,7 @@ Dependency Injection
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS-2/" rel="tag">#AngularJS 2</a>
-          
-            <a href="/tags/Node/" rel="tag">#Node</a>
+            <a href="/tags/ssh/" rel="tag">#ssh</a>
           
         </div>
       
@@ -424,17 +389,13 @@ Dependency Injection
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/07/angular2_pro_stuct/" rel="next" title="Angular 2 项目结构">
-                <i class="fa fa-chevron-left"></i> Angular 2 项目结构
+              <a href="/2016/07/26/ansible_cn_blogs/" rel="next" title="Ansible学习资料整理">
+                <i class="fa fa-chevron-left"></i> Ansible学习资料整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/12/angular_glossary/" rel="prev" title="Angular 2 架构设计">
-                Angular 2 架构设计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -590,7 +551,7 @@ Dependency Injection
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-keygen创建密钥"><span class="nav-number">1.</span> <span class="nav-text">ssh-keygen创建密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传公钥"><span class="nav-number">2.</span> <span class="nav-text">上传公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
@@ -710,9 +671,9 @@ Dependency Injection
 
     <script type="text/javascript">
       var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/11/angular2_arch/';
-      var disqus_title = "Angular 2 架构设计";
-      var disqus_url = 'http://zaife.me/2016/07/11/angular2_arch/';
+      var disqus_identifier = '2016/07/26/ssh_no_pass/';
+      var disqus_title = "ssh 无密码登录";
+      var disqus_url = 'http://zaife.me/2016/07/26/ssh_no_pass/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');

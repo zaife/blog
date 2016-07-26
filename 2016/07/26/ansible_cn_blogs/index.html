@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ssh," />
+  <meta name="keywords" content="Ansible,自动部署," />
 
 
 
@@ -86,28 +86,37 @@
 
 
 
-<meta name="description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
-为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
-ssh-keygen创建密钥1$ ssh-keygen
-以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
-运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
+<meta name="description" content="Ansible学习资料整理，主要是整理网上Ansible的中文资料
+运维之路博客
+ansible小结（一）ansible的安装
+ansible小结（二）ansible架构
+ansible小结（三）Inventory与Patterns
+ansible小结（四）ansible.cfg与默认配置
+ansible小结（五）Dynamic Inventory
+ansible小结（六）Ad-hoc与comma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh 无密码登录">
-<meta property="og:url" content="http://zaife.me/2016/07/22/ssh_no_pass/index.html">
+<meta property="og:title" content="Ansible学习资料整理">
+<meta property="og:url" content="http://zaife.me/2016/07/26/ansible_cn_blogs/index.html">
 <meta property="og:site_name" content="zaife的博客">
-<meta property="og:description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
-为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
-ssh-keygen创建密钥1$ ssh-keygen
-以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
-运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
-<meta property="og:updated_time" content="2016-07-26T06:16:10.000Z">
+<meta property="og:description" content="Ansible学习资料整理，主要是整理网上Ansible的中文资料
+运维之路博客
+ansible小结（一）ansible的安装
+ansible小结（二）ansible架构
+ansible小结（三）Inventory与Patterns
+ansible小结（四）ansible.cfg与默认配置
+ansible小结（五）Dynamic Inventory
+ansible小结（六）Ad-hoc与comma">
+<meta property="og:updated_time" content="2016-07-26T08:30:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ssh 无密码登录">
-<meta name="twitter:description" content="SSH有两种验证方式，一种是基于密码，一种是基于密钥。
-为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。
-ssh-keygen创建密钥1$ ssh-keygen
-以上命令等价于 ssh-keygen -t rsa-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa
-运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置">
+<meta name="twitter:title" content="Ansible学习资料整理">
+<meta name="twitter:description" content="Ansible学习资料整理，主要是整理网上Ansible的中文资料
+运维之路博客
+ansible小结（一）ansible的安装
+ansible小结（二）ansible架构
+ansible小结（三）Inventory与Patterns
+ansible小结（四）ansible.cfg与默认配置
+ansible小结（五）Dynamic Inventory
+ansible小结（六）Ad-hoc与comma">
 
 
 
@@ -128,9 +137,9 @@ ssh-keygen创建密钥1$ ssh-keygen
 
 
 
-  <link rel="canonical" href="http://zaife.me/2016/07/22/ssh_no_pass/"/>
+  <link rel="canonical" href="http://zaife.me/2016/07/26/ansible_cn_blogs/"/>
 
-  <title> ssh 无密码登录 | zaife的博客 </title>
+  <title> Ansible学习资料整理 | zaife的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -279,7 +288,7 @@ ssh-keygen创建密钥1$ ssh-keygen
             
             
               
-                ssh 无密码登录
+                Ansible学习资料整理
               
             
           </h1>
@@ -291,8 +300,8 @@ ssh-keygen创建密钥1$ ssh-keygen
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-22T00:00:00+08:00" content="2016-07-22">
-              2016-07-22
+            <time itemprop="dateCreated" datetime="2016-07-26T00:00:00+08:00" content="2016-07-26">
+              2016-07-26
             </time>
           </span>
 
@@ -305,8 +314,8 @@ ssh-keygen创建密钥1$ ssh-keygen
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/ansible/" itemprop="url" rel="index">
+                    <span itemprop="name">ansible</span>
                   </a>
                 </span>
 
@@ -321,8 +330,8 @@ ssh-keygen创建密钥1$ ssh-keygen
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/22/ssh_no_pass/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/22/ssh_no_pass/" itemprop="commentsCount"></span>
+                <a href="/2016/07/26/ansible_cn_blogs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/26/ansible_cn_blogs/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -345,20 +354,51 @@ ssh-keygen创建密钥1$ ssh-keygen
       
 
       
-        <p>SSH有两种验证方式，一种是基于密码，一种是基于密钥。</p>
-<p>为了登录方便，我们可以配置密钥方式，这样就可以免密码登录远程服务器。</p>
-<h3 id="ssh-keygen创建密钥"><a href="#ssh-keygen创建密钥" class="headerlink" title="ssh-keygen创建密钥"></a>ssh-keygen创建密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen</span><br></pre></td></tr></table></figure>
-<p>以上命令等价于 ssh-keygen -t rsa<br>-t:指定密钥的类型,默认为SSH-2 的rsa类型;还可以说dsa</p>
-<p>运行上面的命令后，系统会出现一系列提示，可以一路回车。特别说明，其中有一个问题是，要不要对私钥设置口令（passphrase），如果担心私钥的安全，可以设置一个。运行结束以后，会在 ~/.ssh/ 目录下新生成两个文件：id_rsa.pub和id_rsa。前者公钥，后者是私钥。也可以指定路径。</p>
-<h3 id="上传公钥"><a href="#上传公钥" class="headerlink" title="上传公钥"></a>上传公钥</h3><p>可以通过scp命令上传公钥到远程服务器，并写入authorized_keys文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  scp id_rsa.pub root@hosts:~/tt_key</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat tt_key &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
-<p>也可以通过ssh-copy-id命运(openSSH)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-copy-id user@host</span><br></pre></td></tr></table></figure>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>.ssh 目录权限一定要为700</p>
-<p>authorized_keys文件权限为600</p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://blog.csdn.net/wangjunjun2008/article/details/20037101" target="_blank" rel="external">http://blog.csdn.net/wangjunjun2008/article/details/20037101</a><br><a href="http://blog.csdn.net/leexide/article/details/17252369" target="_blank" rel="external">http://blog.csdn.net/leexide/article/details/17252369</a></p>
-<p><a href="https://www.linuxdashen.com/ssh-key%EF%BC%9A%E4%B8%A4%E4%B8%AA%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0ssh%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95" target="_blank" rel="external">https://www.linuxdashen.com/ssh-key%EF%BC%9A%E4%B8%A4%E4%B8%AA%E7%AE%80%E5%8D%95%E6%AD%A5%E9%AA%A4%E5%AE%9E%E7%8E%B0ssh%E6%97%A0%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95</a></p>
+        <p>Ansible学习资料整理，主要是整理网上Ansible的中文资料</p>
+<h3 id="运维之路博客"><a href="#运维之路博客" class="headerlink" title="运维之路博客"></a>运维之路博客</h3><ul>
+<li><a href="http://www.361way.com/ansible-install/4371.html" target="_blank" rel="external">ansible小结（一）ansible的安装</a></li>
+<li><a href="http://www.361way.com/ansible-framework/4393.html" target="_blank" rel="external">ansible小结（二）ansible架构</a></li>
+<li><a href="http://www.361way.com/ansible-inventory-patterns/4398.html" target="_blank" rel="external">ansible小结（三）Inventory与Patterns</a></li>
+<li><a href="http://www.361way.com/ansible-cfg/4401.html" target="_blank" rel="external">ansible小结（四）ansible.cfg与默认配置</a></li>
+<li><a href="http://www.361way.com/ansible-dynamic-inventory/4403.html" target="_blank" rel="external">ansible小结（五）Dynamic Inventory</a></li>
+<li><a href="http://www.361way.com/ad-hoc-commands-modules/4408.html" target="_blank" rel="external">ansible小结（六）Ad-hoc与commands模块</a></li>
+<li><a href="http://www.361way.com/ansible-modules/4415.html" target="_blank" rel="external">ansible小结（七）常用模块</a></li>
+<li><a href="http://www.361way.com/ansible-playbook-example/4441.html" target="_blank" rel="external">ansible小结（八）ansible-playbook简单使用</a></li>
+<li><a href="http://www.361way.com/playbook-advanced/4443.html" target="_blank" rel="external">ansible小结（九）playbook进阶</a></li>
+<li><a href="http://www.361way.com/ansible-api/4446.html" target="_blank" rel="external">ansible小结（十）ansible api</a></li>
+<li><a href="http://www.361way.com/ansible-su/4882.html" target="_blank" rel="external">ansible小结（十一）ansible普通用户su切换问题</a></li>
+<li><a href="http://www.361way.com/ansible-diskinfo/4995.html" target="_blank" rel="external">ansible小结（十 二）磁盘使用率筛选</a></li>
+</ul>
+<h3 id="xiaorui博客"><a href="#xiaorui博客" class="headerlink" title="xiaorui博客"></a>xiaorui博客</h3><ul>
+<li><a href="http://xiaorui.cc/tag/ansible/" target="_blank" rel="external">Ansible相关</a></li>
+<li><a href="http://xiaorui.cc/tag/ansible-api/" target="_blank" rel="external">Ansible API 相关</a></li>
+</ul>
+<h3 id="灿哥的Blog"><a href="#灿哥的Blog" class="headerlink" title="灿哥的Blog"></a>灿哥的Blog</h3><ul>
+<li><a href="http://www.shencan.net/index.php/2015/07/08/run-ansible-and-saltstack-on-jenkins/" target="_blank" rel="external">Run Ansible and SaltStack on Jenkins</a></li>
+<li><a href="http://www.shencan.net/index.php/2015/02/14/run-ansible-through-jumpbox-machine/" target="_blank" rel="external">Run Ansible Through Jumpbox Machine</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/08/13/ansible-and-aws/" target="_blank" rel="external">Ansible and AWS</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/08/01/ansible-multiple-inventory-file-test/" target="_blank" rel="external">Ansible multiple Inventory file test</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/18/ansible-playbook%e4%b8%ad%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8%e5%a4%a7%e5%85%a8/" target="_blank" rel="external">ansible playbook中的迭代器大全</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/17/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins-%ef%bc%88%e5%ae%9e%e6%88%98%ef%bc%89/" target="_blank" rel="external">ansible 插件之callback_plugins （实战）</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/07/ansible%e6%8f%92%e4%bb%b6%e4%b9%8b-lookup_plugins/" target="_blank" rel="external">ansible插件之 lookup_plugins</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/06/16/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins/" target="_blank" rel="external">ansible 插件之callback_plugins</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/05/22/ansible-%e5%8a%a8%e6%80%81inventory/" target="_blank" rel="external">ansible 动态Inventory</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/05/17/ansible-%e8%87%aa%e5%ae%9a%e4%b9%89-facts/" target="_blank" rel="external">ansible 自定义 facts</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/04/10/ansible-%e5%a5%bd%e5%9f%ba%e5%8f%8b-ansible-shell/" target="_blank" rel="external">ansible 好基友 ansible-shell</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/02/22/ansible%e4%b8%89-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97/" target="_blank" rel="external">ansible(三) 自定义模块</a></li>
+<li><a href="http://www.shencan.net/index.php/2013/09/03/ansible%e4%ba%8c-%e7%ae%a1%e7%90%86%e5%85%a8%e7%bd%91haproxy%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6/" target="_blank" rel="external">ansible(二) 管理全网haproxy配置文件</a></li>
+<li><a href="http://www.shencan.net/index.php/2013/09/02/ansible-%e5%88%9d%e4%bd%93%e9%aa%8c/" target="_blank" rel="external">ansible 初体验</a></li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li><a href="https://segmentfault.com/a/1190000002927314" target="_blank" rel="external">基于 ANSIBLE 自动化运维实践</a></li>
+<li><a href="http://ansible-tran.readthedocs.io/en/latest/index.html" target="_blank" rel="external">中文指南</a></li>
+<li><a href="https://ansible-book.gitbooks.io/ansible-first-book/content/" target="_blank" rel="external">Ansible入门</a></li>
+<li><a href="http://ansible.richard.zone/" target="_blank" rel="external">Ansible Workshop</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/linux/1502_lih_ansible/" target="_blank" rel="external">使用 Ansible 管理 MySQL 复制</a></li>
+</ul>
+<h3 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h3><ul>
+<li><a href="http://docs.ansible.com/ansible/index.html" target="_blank" rel="external">Ansible</a></li>
+</ul>
 
       
     </div>
@@ -380,7 +420,9 @@ ssh-keygen创建密钥1$ ssh-keygen
       
         <div class="post-tags">
           
-            <a href="/tags/ssh/" rel="tag">#ssh</a>
+            <a href="/tags/Ansible/" rel="tag">#Ansible</a>
+          
+            <a href="/tags/自动部署/" rel="tag">#自动部署</a>
           
         </div>
       
@@ -389,16 +431,16 @@ ssh-keygen创建密钥1$ ssh-keygen
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/12/angular_glossary/" rel="next" title="Angular 2 架构设计">
-                <i class="fa fa-chevron-left"></i> Angular 2 架构设计
+              <a href="/2016/07/22/ansible_intro/" rel="next" title="Ansible介绍">
+                <i class="fa fa-chevron-left"></i> Ansible介绍
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/22/ansible_intro/" rel="prev" title="Ansible介绍">
-                Ansible介绍 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/26/ssh_no_pass/" rel="prev" title="ssh 无密码登录">
+                ssh 无密码登录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,7 +516,7 @@ ssh-keygen创建密钥1$ ssh-keygen
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -555,7 +597,7 @@ ssh-keygen创建密钥1$ ssh-keygen
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh-keygen创建密钥"><span class="nav-number">1.</span> <span class="nav-text">ssh-keygen创建密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传公钥"><span class="nav-number">2.</span> <span class="nav-text">上传公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-number">3.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#运维之路博客"><span class="nav-number">1.</span> <span class="nav-text">运维之路博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xiaorui博客"><span class="nav-number">2.</span> <span class="nav-text">xiaorui博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#灿哥的Blog"><span class="nav-number">3.</span> <span class="nav-text">灿哥的Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官网"><span class="nav-number">5.</span> <span class="nav-text">官网</span></a></li></ol></div>
             
           </div>
         </section>
@@ -675,9 +717,9 @@ ssh-keygen创建密钥1$ ssh-keygen
 
     <script type="text/javascript">
       var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/22/ssh_no_pass/';
-      var disqus_title = "ssh 无密码登录";
-      var disqus_url = 'http://zaife.me/2016/07/22/ssh_no_pass/';
+      var disqus_identifier = '2016/07/26/ansible_cn_blogs/';
+      var disqus_title = "Ansible学习资料整理";
+      var disqus_url = 'http://zaife.me/2016/07/26/ansible_cn_blogs/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
