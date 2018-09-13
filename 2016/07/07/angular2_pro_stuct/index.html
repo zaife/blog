@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -29,9 +36,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,9 +75,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="AngularJS 2,Node," />
@@ -79,70 +89,70 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。
-Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。
-1ng new test_ang2
-生成后的项目目录如下：
-1234567891011121314151617181920212223242526272829303132">
+<meta name="description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。 Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。 1ng new test_ang2 生成后的项目目录如下： 1234567891011121314151617181920212223242526272829303132">
+<meta name="keywords" content="AngularJS 2,Node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular 2 项目结构">
 <meta property="og:url" content="http://zaife.me/2016/07/07/angular2_pro_stuct/index.html">
 <meta property="og:site_name" content="zaife的博客">
-<meta property="og:description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。
-Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。
-1ng new test_ang2
-生成后的项目目录如下：
-1234567891011121314151617181920212223242526272829303132">
+<meta property="og:description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。 Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。 1ng new test_ang2 生成后的项目目录如下： 1234567891011121314151617181920212223242526272829303132">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-07-07T03:47:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular 2 项目结构">
-<meta name="twitter:description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。
-Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。
-1ng new test_ang2
-生成后的项目目录如下：
-1234567891011121314151617181920212223242526272829303132">
+<meta name="twitter:description" content="Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。 Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。 1ng new test_ang2 生成后的项目目录如下： 1234567891011121314151617181920212223242526272829303132">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://zaife.me/2016/07/07/angular2_pro_stuct/"/>
 
-  <title> Angular 2 项目结构 | zaife的博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+
+
+  <title>Angular 2 项目结构 | zaife的博客</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-67371552-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -155,34 +165,44 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">zaife的博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zaife的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">zaife的技术说说</p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -202,28 +222,8 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -233,7 +233,7 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -249,6 +249,8 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -262,49 +264,68 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zaife.me/2016/07/07/angular2_pro_stuct/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zaife">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/32269?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zaife的博客">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Angular 2 项目结构
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">Angular 2 项目结构</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-07T00:00:00+08:00" content="2016-07-07">
-              2016-07-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-07T00:00:00+08:00">
+                2016-07-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/AngularJS-2/" itemprop="url" rel="index">
                     <span itemprop="name">AngularJS 2</span>
                   </a>
@@ -312,33 +333,30 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/07/angular2_pro_stuct/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/07/angular2_pro_stuct/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
           
 
           
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -346,8 +364,8 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
 
       
         <p>Angular 2 项目可以通过cli工具命令行生成，也可以自己创建。</p>
-<h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3><p>Angular-CLI工具是基于<a href="http://www.ember-cli.com/" target="_blank" rel="external">ember-cli</a>项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng new <span class="built_in">test</span>_ang2</span><br></pre></td></tr></table></figure>
+<h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3><p>Angular-CLI工具是基于<a href="http://www.ember-cli.com/" target="_blank" rel="noopener">ember-cli</a>项目，可以方便的生成Angular 2项目，注意项目还处于开发状态中，没有正式发布。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng new test_ang2</span><br></pre></td></tr></table></figure>
 <p>生成后的项目目录如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">├── angular-cli-build.js</span><br><span class="line">├── angular-cli.json</span><br><span class="line">├── config</span><br><span class="line">│   ├── environment.dev.ts</span><br><span class="line">│   ├── environment.js</span><br><span class="line">│   ├── environment.prod.ts</span><br><span class="line">│   ├── karma-test-shim.js</span><br><span class="line">│   ├── karma.conf.js</span><br><span class="line">│   └── protractor.conf.js</span><br><span class="line">├── e2e</span><br><span class="line">│   ├── app.e2e.ts</span><br><span class="line">│   ├── app.po.ts</span><br><span class="line">│   ├── tsconfig.json</span><br><span class="line">│   └── typings.d.ts</span><br><span class="line">├── node_modules</span><br><span class="line">├── package.json</span><br><span class="line">├── public</span><br><span class="line">├── src</span><br><span class="line">│   ├── app</span><br><span class="line">│   │   ├── environment.ts</span><br><span class="line">│   │   ├── index.ts</span><br><span class="line">│   │   ├── shared</span><br><span class="line">│   │   │   └── index.ts</span><br><span class="line">│   │   ├── <span class="built_in">test</span>-ang2.component.css</span><br><span class="line">│   │   ├── <span class="built_in">test</span>-ang2.component.html</span><br><span class="line">│   │   ├── <span class="built_in">test</span>-ang2.component.spec.ts</span><br><span class="line">│   │   └── <span class="built_in">test</span>-ang2.component.ts</span><br><span class="line">│   ├── favicon.ico</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   ├── main.ts</span><br><span class="line">│   ├── system-config.ts</span><br><span class="line">│   ├── tsconfig.json</span><br><span class="line">│   └── typings.d.ts</span><br><span class="line">├── tslint.json</span><br><span class="line">├── typings</span><br><span class="line">│   ├── browser</span><br><span class="line">│   │   └── ambient</span><br><span class="line">│   │       ├── angular-protractor</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       ├── es6-shim</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       ├── jasmine</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       └── selenium-webdriver</span><br><span class="line">│   │           └── index.d.ts</span><br><span class="line">│   ├── browser.d.ts</span><br><span class="line">│   ├── main</span><br><span class="line">│   │   └── ambient</span><br><span class="line">│   │       ├── angular-protractor</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       ├── es6-shim</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       ├── jasmine</span><br><span class="line">│   │       │   └── index.d.ts</span><br><span class="line">│   │       └── selenium-webdriver</span><br><span class="line">│   │           └── index.d.ts</span><br><span class="line">│   └── main.d.ts</span><br><span class="line">└── typings.json</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -364,38 +382,67 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
 <h4 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"target"</span>: <span class="string">"es5"</span>,</span><br><span class="line">    <span class="attr">"module"</span>: <span class="string">"commonjs"</span>,</span><br><span class="line">    <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>,</span><br><span class="line">    <span class="attr">"sourceMap"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"emitDecoratorMetadata"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"removeComments"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"noImplicitAny"</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="typings-json"><a href="#typings-json" class="headerlink" title="typings.json"></a>typings.json</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"globalDependencies"</span>: &#123;</span><br><span class="line">    <span class="attr">"core-js"</span>: <span class="string">"registry:dt/core-js#0.0.0+20160602141332"</span>,</span><br><span class="line">    <span class="attr">"jasmine"</span>: <span class="string">"registry:dt/jasmine#2.2.0+20160621224255"</span>,</span><br><span class="line">    <span class="attr">"node"</span>: <span class="string">"registry:dt/node#6.0.0+20160621231320"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="system-config-js"><a href="#system-config-js" class="headerlink" title="system.config.js"></a>system.config.js</h4><p>通过SystemJS加载应用和依赖lib库。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * System configuration for Angular 2 samples</span><br><span class="line"> * Adjust as necessary for your application needs.</span><br><span class="line"> */</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">global</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// map tells the System loader where to look for things</span></span><br><span class="line">  <span class="keyword">var</span> map = &#123;</span><br><span class="line">    <span class="string">'app'</span>:                        <span class="string">'app'</span>, <span class="comment">// 'dist',</span></span><br><span class="line">    <span class="string">'@angular'</span>:                   <span class="string">'node_modules/@angular'</span>,</span><br><span class="line">    <span class="string">'angular2-in-memory-web-api'</span>: <span class="string">'node_modules/angular2-in-memory-web-api'</span>,</span><br><span class="line">    <span class="string">'rxjs'</span>:                       <span class="string">'node_modules/rxjs'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// packages tells the System loader how to load when no filename and/or no extension</span></span><br><span class="line">  <span class="keyword">var</span> packages = &#123;</span><br><span class="line">    <span class="string">'app'</span>:                        &#123; main: <span class="string">'main.js'</span>,  defaultExtension: <span class="string">'js'</span> &#125;,</span><br><span class="line">    <span class="string">'rxjs'</span>:                       &#123; defaultExtension: <span class="string">'js'</span> &#125;,</span><br><span class="line">    <span class="string">'angular2-in-memory-web-api'</span>: &#123; main: <span class="string">'index.js'</span>, defaultExtension: <span class="string">'js'</span> &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">var</span> ngPackageNames = [</span><br><span class="line">    <span class="string">'common'</span>,</span><br><span class="line">    <span class="string">'compiler'</span>,</span><br><span class="line">    <span class="string">'core'</span>,</span><br><span class="line">    <span class="string">'forms'</span>,</span><br><span class="line">    <span class="string">'http'</span>,</span><br><span class="line">    <span class="string">'platform-browser'</span>,</span><br><span class="line">    <span class="string">'platform-browser-dynamic'</span>,</span><br><span class="line">    <span class="string">'router'</span>,</span><br><span class="line">    <span class="string">'router-deprecated'</span>,</span><br><span class="line">    <span class="string">'upgrade'</span>,</span><br><span class="line">  ];</span><br><span class="line">  <span class="comment">// Individual files (~300 requests):</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">packIndex</span>(<span class="params">pkgName</span>) </span>&#123;</span><br><span class="line">    packages[<span class="string">'@angular/'</span>+pkgName] = &#123; main: <span class="string">'index.js'</span>, defaultExtension: <span class="string">'js'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Bundled (~40 requests):</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">packUmd</span>(<span class="params">pkgName</span>) </span>&#123;</span><br><span class="line">    packages[<span class="string">'@angular/'</span>+pkgName] = &#123; main: <span class="string">'/bundles/'</span> + pkgName + <span class="string">'.umd.js'</span>, defaultExtension: <span class="string">'js'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Most environments should use UMD; some (Karma) need the individual index files</span></span><br><span class="line">  <span class="keyword">var</span> setPackageConfig = System.packageWithIndex ? packIndex : packUmd;</span><br><span class="line">  <span class="comment">// Add package entries for angular packages</span></span><br><span class="line">  ngPackageNames.forEach(setPackageConfig);</span><br><span class="line">  <span class="keyword">var</span> config = &#123;</span><br><span class="line">    map: map,</span><br><span class="line">    packages: packages</span><br><span class="line">  &#125;;</span><br><span class="line">  System.config(config);</span><br><span class="line">&#125;)(<span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * System configuration for Angular 2 samples</span></span><br><span class="line"><span class="comment"> * Adjust as necessary for your application needs.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">global</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// map tells the System loader where to look for things</span></span><br><span class="line">  <span class="keyword">var</span> map = &#123;</span><br><span class="line">    <span class="string">'app'</span>:                        <span class="string">'app'</span>, <span class="comment">// 'dist',</span></span><br><span class="line">    <span class="string">'@angular'</span>:                   <span class="string">'node_modules/@angular'</span>,</span><br><span class="line">    <span class="string">'angular2-in-memory-web-api'</span>: <span class="string">'node_modules/angular2-in-memory-web-api'</span>,</span><br><span class="line">    <span class="string">'rxjs'</span>:                       <span class="string">'node_modules/rxjs'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// packages tells the System loader how to load when no filename and/or no extension</span></span><br><span class="line">  <span class="keyword">var</span> packages = &#123;</span><br><span class="line">    <span class="string">'app'</span>:                        &#123; <span class="attr">main</span>: <span class="string">'main.js'</span>,  <span class="attr">defaultExtension</span>: <span class="string">'js'</span> &#125;,</span><br><span class="line">    <span class="string">'rxjs'</span>:                       &#123; <span class="attr">defaultExtension</span>: <span class="string">'js'</span> &#125;,</span><br><span class="line">    <span class="string">'angular2-in-memory-web-api'</span>: &#123; <span class="attr">main</span>: <span class="string">'index.js'</span>, <span class="attr">defaultExtension</span>: <span class="string">'js'</span> &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">var</span> ngPackageNames = [</span><br><span class="line">    <span class="string">'common'</span>,</span><br><span class="line">    <span class="string">'compiler'</span>,</span><br><span class="line">    <span class="string">'core'</span>,</span><br><span class="line">    <span class="string">'forms'</span>,</span><br><span class="line">    <span class="string">'http'</span>,</span><br><span class="line">    <span class="string">'platform-browser'</span>,</span><br><span class="line">    <span class="string">'platform-browser-dynamic'</span>,</span><br><span class="line">    <span class="string">'router'</span>,</span><br><span class="line">    <span class="string">'router-deprecated'</span>,</span><br><span class="line">    <span class="string">'upgrade'</span>,</span><br><span class="line">  ];</span><br><span class="line">  <span class="comment">// Individual files (~300 requests):</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">packIndex</span>(<span class="params">pkgName</span>) </span>&#123;</span><br><span class="line">    packages[<span class="string">'@angular/'</span>+pkgName] = &#123; <span class="attr">main</span>: <span class="string">'index.js'</span>, <span class="attr">defaultExtension</span>: <span class="string">'js'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Bundled (~40 requests):</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">packUmd</span>(<span class="params">pkgName</span>) </span>&#123;</span><br><span class="line">    packages[<span class="string">'@angular/'</span>+pkgName] = &#123; <span class="attr">main</span>: <span class="string">'/bundles/'</span> + pkgName + <span class="string">'.umd.js'</span>, <span class="attr">defaultExtension</span>: <span class="string">'js'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Most environments should use UMD; some (Karma) need the individual index files</span></span><br><span class="line">  <span class="keyword">var</span> setPackageConfig = System.packageWithIndex ? packIndex : packUmd;</span><br><span class="line">  <span class="comment">// Add package entries for angular packages</span></span><br><span class="line">  ngPackageNames.forEach(setPackageConfig);</span><br><span class="line">  <span class="keyword">var</span> config = &#123;</span><br><span class="line">    map: map,</span><br><span class="line">    packages: packages</span><br><span class="line">  &#125;;</span><br><span class="line">  System.config(config);</span><br><span class="line">&#125;)(<span class="keyword">this</span>);</span><br></pre></td></tr></table></figure>
 <h4 id="AppComponent"><a href="#AppComponent" class="headerlink" title="AppComponent"></a>AppComponent</h4><p>每一个应用都有一个root component，一般可以命名为AppComponent。Components是Angular 2 应用的基本构成组件，Component通过关联的模板文件控制着一个view在屏幕上的显示输出。</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component &#125; from <span class="string">'@angular/core'</span>;</span><br><span class="line">@Component(&#123;</span><br><span class="line">  selector: <span class="string">'my-app'</span>,</span><br><span class="line">  template: <span class="string">'&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'my-app'</span>,</span><br><span class="line">  template: <span class="string">'&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123; &#125;</span><br></pre></td></tr></table></figure>
 <h4 id="main-ts"><a href="#main-ts" class="headerlink" title="main.ts"></a>main.ts</h4><p>通过main.ts加载和启动component</p>
-<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; bootstrap &#125;    from <span class="string">'@angular/platform-browser-dynamic'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; from <span class="string">'./app.component'</span>;</span><br><span class="line">bootstrap(AppComponent);</span><br></pre></td></tr></table></figure>
-<h4 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Angular 2 QuickStart<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"styles.css"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 1. Load libraries --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- Polyfill(s) for older browsers --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/core-js/client/shim.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/zone.js/dist/zone.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/reflect-metadata/Reflect.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/systemjs/dist/system.src.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 2. Configure SystemJS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"systemjs.config.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line">      System.import(<span class="string">'app'</span>).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123; <span class="built_in">console</span>.error(err); &#125;);</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 3. Display the application --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-app</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">my-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; bootstrap &#125;    <span class="keyword">from</span> <span class="string">'@angular/platform-browser-dynamic'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; <span class="keyword">from</span> <span class="string">'./app.component'</span>;</span><br><span class="line">bootstrap(AppComponent);</span><br></pre></td></tr></table></figure>
+<h4 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Angular 2 QuickStart<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"styles.css"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 1. Load libraries --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- Polyfill(s) for older browsers --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/core-js/client/shim.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/zone.js/dist/zone.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/reflect-metadata/Reflect.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"node_modules/systemjs/dist/system.src.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 2. Configure SystemJS --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"systemjs.config.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">      System.import(<span class="string">'app'</span>).catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123; <span class="built_in">console</span>.error(err); &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 3. Display the application --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-app</span>&gt;</span>Loading...<span class="tag">&lt;/<span class="name">my-app</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/IMG_5231.JPG" alt="zaife WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/IMG_5232.JPG" alt="zaife Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS-2/" rel="tag">#AngularJS 2</a>
+            <a href="/tags/AngularJS-2/" rel="tag"># AngularJS 2</a>
           
-            <a href="/tags/Node/" rel="tag">#Node</a>
+            <a href="/tags/Node/" rel="tag"># Node</a>
           
         </div>
+      
+
+      
+      
       
 
       
@@ -407,6 +454,8 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
               </a>
             
           </div>
+
+          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -421,6 +470,10 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -438,13 +491,6 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
   </div>
 
 
@@ -461,6 +507,7 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -476,25 +523,32 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
                alt="zaife" />
           <p class="site-author-name" itemprop="name">zaife</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">10</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -502,9 +556,11 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">7</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -522,7 +578,9 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
@@ -531,7 +589,9 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
                   
                     <i class="fa fa-fw fa-twitter"></i>
                   
-                  Twitter
+                    
+                      Twitter
+                    
                 </a>
               </span>
             
@@ -540,7 +600,9 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  Weibo
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -550,7 +612,7 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
         
         
           <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
@@ -559,19 +621,29 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
         
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-CLI"><span class="nav-number">1.</span> <span class="nav-text">Angular-CLI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手动搭建"><span class="nav-number">2.</span> <span class="nav-text">手动搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#package-json"><span class="nav-number">2.1.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tsconfig-json"><span class="nav-number">2.2.</span> <span class="nav-text">tsconfig.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typings-json"><span class="nav-number">2.3.</span> <span class="nav-text">typings.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#system-config-js"><span class="nav-number">2.4.</span> <span class="nav-text">system.config.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AppComponent"><span class="nav-number">2.5.</span> <span class="nav-text">AppComponent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#main-ts"><span class="nav-number">2.6.</span> <span class="nav-text">main.ts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#index-html"><span class="nav-number">2.7.</span> <span class="nav-text">index.html</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -587,23 +659,25 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zaife</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
+
 
         
 
@@ -611,9 +685,13 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -636,82 +714,90 @@ Angular-CLIAngular-CLI工具是基于ember-cli项目，可以方便的生成Angu
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/07/angular2_pro_stuct/';
-      var disqus_title = "Angular 2 项目结构";
-      var disqus_url = 'http://zaife.me/2016/07/07/angular2_pro_stuct/';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
-      
-    </script>
-  
 
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
   
 
   

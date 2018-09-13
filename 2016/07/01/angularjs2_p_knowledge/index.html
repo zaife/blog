@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -29,9 +36,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,9 +75,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="AngularJS 2,Node," />
@@ -79,91 +89,70 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
+<meta name="description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：  node npm ES6 TypeScript  Zone.js core-js rxjs SystemJS reflect-metadata Angular-CLI">
+<meta name="keywords" content="AngularJS 2,Node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AngularJS 2 预备知识">
 <meta property="og:url" content="http://zaife.me/2016/07/01/angularjs2_p_knowledge/index.html">
 <meta property="og:site_name" content="zaife的博客">
-<meta property="og:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
+<meta property="og:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：  node npm ES6 TypeScript  Zone.js core-js rxjs SystemJS reflect-metadata Angular-CLI">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-07-04T14:43:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS 2 预备知识">
-<meta name="twitter:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：
-
-node
-npm
-ES6
-TypeScript 
-Zone.js
-core-js
-rxjs
-SystemJS
-reflect-metadata
-Angular-CLI">
+<meta name="twitter:description" content="AngularJS 2 完全不同于Angularjs 1，是面向ES6规范的。AngularJS2更加支持标准JS，性能更好，跨平台，支持终端等。学习AngularJS 2需要了解：  node npm ES6 TypeScript  Zone.js core-js rxjs SystemJS reflect-metadata Angular-CLI">
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://zaife.me/2016/07/01/angularjs2_p_knowledge/"/>
 
-  <title> AngularJS 2 预备知识 | zaife的博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+
+
+  <title>AngularJS 2 预备知识 | zaife的博客</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-67371552-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -176,34 +165,44 @@ Angular-CLI">
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">zaife的博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zaife的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">zaife的技术说说</p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -223,28 +222,8 @@ Angular-CLI">
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -254,7 +233,7 @@ Angular-CLI">
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -270,6 +249,8 @@ Angular-CLI">
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -283,49 +264,68 @@ Angular-CLI">
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zaife.me/2016/07/01/angularjs2_p_knowledge/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zaife">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/32269?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zaife的博客">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                AngularJS 2 预备知识
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">AngularJS 2 预备知识</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-01T00:00:00+08:00" content="2016-07-01">
-              2016-07-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-01T00:00:00+08:00">
+                2016-07-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/AngularJS-2/" itemprop="url" rel="index">
                     <span itemprop="name">AngularJS 2</span>
                   </a>
@@ -333,33 +333,30 @@ Angular-CLI">
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/01/angularjs2_p_knowledge/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/01/angularjs2_p_knowledge/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
           
 
           
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -383,14 +380,14 @@ Angular-CLI">
 <h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>  简单的说 Node.js 就是运行在服务端的 JavaScript。Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
 <p>  学习资料：</p>
 <ul>
-<li><a href="https://nodejs.org/" target="_blank" rel="external">官网</a></li>
-<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-tutorial.html</a></li>
+<li><a href="https://nodejs.org/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-tutorial.html</a></li>
 </ul>
 <h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><p>npm（node package manager），是node.js的一个包管理器，用于第三方模块的下载、安装和管理。</p>
 <p>npm收录着庞大而丰富的第三方资源，截至目前为止已经收录了220102个包。npm之于node.js，其重要程度可比maven与java、pip与python。</p>
 <ul>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="external">官网</a></li>
-<li><a href="https://github.com/npm/npm" target="_blank" rel="external">Github</a></li>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://github.com/npm/npm" target="_blank" rel="noopener">Github</a></li>
 </ul>
 <h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><p>ECMAScript 6（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。Mozilla 公司将在这个标准的基础上，推出 JavaScript 2.0。</p>
 <p>ES6 的目标，是使得 JavaScript 语言可以用来编写大型的复杂的应用程序，成为企业级开发语言。</p>
@@ -399,78 +396,107 @@ Angular-CLI">
 <p>之所以不叫 JavaScript，有两个原因。一是商标，Java 是 Sun 公司的商标，根据授权协议，只有 Netscape 公司可以合法地使用 JavaScript 这个名字，且 JavaScript 本身也已经被 Netscape 公司注册为商标。二是想体现这门语言的制定者是 ECMA，不是 Netscape，这样有利于保证这门语言的开放性和中立性。因此，ECMAScript 和 JavaScript 的关系是，前者是后者的规格，后者是前者的一种实现。在日常场合，这两个词是可以互换的。</p>
 <ul>
 <li><a href="ECMAScript 6入门">ECMAScript 6入门(阮一峰)</a></li>
-<li><a href="http://es6-features.org/#Constants" target="_blank" rel="external">特性</a></li>
-<li><a href="http://www.infoq.com/cn/ES6-In-Depth" target="_blank" rel="external">InofQ-深入浅出ES6</a></li>
+<li><a href="http://es6-features.org/#Constants" target="_blank" rel="noopener">特性</a></li>
+<li><a href="http://www.infoq.com/cn/ES6-In-Depth" target="_blank" rel="noopener">InofQ-深入浅出ES6</a></li>
 </ul>
 <h3 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h3><p>TypeScript是Microsoft公司注册商标。<br>TypeScript具有类型系统，且是JavaScript的超集。 它可以编译成普通的JavaScript代码。 TypeScript支持任意浏览器，任意环境，任意系统并且是开源的。</p>
 <p>AngularJS 2采用TypeScript开发，并在TypeScript基础上设计了一些特性，简化Angularjs 的开发。</p>
 <ul>
-<li><a href="https://www.typescriptlang.org/" target="_blank" rel="external">官网</a></li>
-<li><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/" target="_blank" rel="external">中文教程</a></li>
+<li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/" target="_blank" rel="noopener">中文教程</a></li>
 </ul>
 <h3 id="Zone-js"><a href="#Zone-js" class="headerlink" title="Zone.js"></a>Zone.js</h3><p>在ng2的开发过程中，Angular团队为我们带来了一个新的库 – zone.js。zone.js的设计灵感来源于Dart语言，它描述JavaScript执行过程的上下文，可以在异步任务之间进行持久性传递，它类似于Java中的TLS（thread-local storage: 线程本地存储）技术，zone.js则是将TLS引入到JavaScript语言中的实现框架。</p>
-<p>a polyfill for the <a href="https://gist.github.com/mhevery/63fdcdf7c65886051d55" target="_blank" rel="external">Zone specification</a> currently before the <a href="http://www.ecma-international.org/memento/TC39.htm" target="_blank" rel="external">TC39</a> committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of zone.js to use (within a compatible version range) without waiting for Angular updates.</p>
+<p>a polyfill for the <a href="https://gist.github.com/mhevery/63fdcdf7c65886051d55" target="_blank" rel="noopener">Zone specification</a> currently before the <a href="http://www.ecma-international.org/memento/TC39.htm" target="_blank" rel="noopener">TC39</a> committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of zone.js to use (within a compatible version range) without waiting for Angular updates.</p>
 <ul>
-<li><a href="https://github.com/angular/zone.js/" target="_blank" rel="external">GitHub</a></li>
-<li><a href="http://www.cnblogs.com/whitewolf/p/zone-js.html" target="_blank" rel="external">zone.js - 暴力之美</a></li>
+<li><a href="https://github.com/angular/zone.js/" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="http://www.cnblogs.com/whitewolf/p/zone-js.html" target="_blank" rel="noopener">zone.js - 暴力之美</a></li>
 </ul>
 <h3 id="core-js"><a href="#core-js" class="headerlink" title="core-js"></a>core-js</h3><p>monkey patches the global context (window) with essential features of ES2015 (ES6). Developers may substitute an alternative polyfill that provides the same core APIs. This dependency should go away once these APIs are implemented by all supported ever-green browsers.</p>
 <p>Modular standard library for JavaScript. Includes polyfills for ECMAScript 5, ECMAScript 6: promises, symbols, collections, iterators, typed arrays, ECMAScript 7+ proposals, setImmediate, etc. Some additional features such as dictionaries or extended partial application. You can require only needed features or use it without global namespace pollution.</p>
 <ul>
-<li><a href="https://www.npmjs.com/package/core-js" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/zloirock/core-js" target="_blank" rel="external">GitHub</a></li>
+<li><a href="https://www.npmjs.com/package/core-js" target="_blank" rel="noopener">npm</a></li>
+<li><a href="https://github.com/zloirock/core-js" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 <h3 id="rxjs"><a href="#rxjs" class="headerlink" title="rxjs"></a>rxjs</h3><p>a polyfill for the Observables specification currently before the TC39 committee that determines standards for the JavaScript language. Developers should be able to pick a preferred version of rxjs (within a compatible version range) without waiting for Angular updates.</p>
 <p>Reactive Extensions Library for JavaScript. This is a rewrite of Reactive-Extensions/RxJS and is intended to supersede it once this is ready. This rewrite is meant to have better performance, better modularity, better debuggable call stacks, while staying mostly backwards compatible, with some breaking changes that reduce the API surface.</p>
 <ul>
-<li><a href="https://www.npmjs.com/package/rxjs" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="external">GitHub</a></li>
+<li><a href="https://www.npmjs.com/package/rxjs" target="_blank" rel="noopener">npm</a></li>
+<li><a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 <h3 id="SystemJS"><a href="#SystemJS" class="headerlink" title="SystemJS"></a>SystemJS</h3><p>A dynamic module loader compatible with the ES2015 module specification. There are other viable choices including the well-regarded webpack.</p>
 <p>Universal dynamic module loader - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS. Works with both Traceur and Babel.</p>
 <ul>
-<li><a href="https://www.npmjs.com/package/systemjs" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/systemjs" target="_blank" rel="external">GitHub</a></li>
+<li><a href="https://www.npmjs.com/package/systemjs" target="_blank" rel="noopener">npm</a></li>
+<li><a href="https://github.com/systemjs" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 <h3 id="reflect-metadata"><a href="#reflect-metadata" class="headerlink" title="reflect-metadata"></a>reflect-metadata</h3><p>a dependency shared between Angular and the TypeScript compiler. Developers should be able to update a TypeScript package without upgrading Angular, which is why this is a dependency of the application and not a dependency of Angular.</p>
 <p>Proposal to add Decorators to ES7, along with a prototype for an ES7 Reflection API for Decorator Metadata</p>
 <ul>
-<li><a href="https://www.npmjs.com/package/reflect-metadata" target="_blank" rel="external">npm</a></li>
-<li><a href="https://github.com/rbuckton/ReflectDecorators" target="_blank" rel="external">GitHub</a></li>
+<li><a href="https://www.npmjs.com/package/reflect-metadata" target="_blank" rel="noopener">npm</a></li>
+<li><a href="https://github.com/rbuckton/ReflectDecorators" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 <h3 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h3><p>Prototype of a CLI for Angular 2 applications based on the ember-cli project.</p>
 <p>angular 2应用工具，可以生成项目、打包、启动、测试等。</p>
 <ul>
-<li><a href="https://github.com/angular/angular-cli" target="_blank" rel="external">GitHub</a></li>
+<li><a href="https://github.com/angular/angular-cli" target="_blank" rel="noopener">GitHub</a></li>
 </ul>
 <p>注: 术语 polyfill 来自于一个家装产品Polyfilla:</p>
 <p>Polyfilla 是一个英国产品，在美国称之为 Spackling Paste (刮墙的,在中国称为腻子)。记住这一点就行: 把旧的浏览器想象成为一面有了裂缝的墙.这些 polyfill 会帮助我们把这面墙的裂缝抹平,还我们一个更好的光滑的墙壁 (浏览器)</p>
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/IMG_5231.JPG" alt="zaife WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/IMG_5232.JPG" alt="zaife Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS-2/" rel="tag">#AngularJS 2</a>
+            <a href="/tags/AngularJS-2/" rel="tag"># AngularJS 2</a>
           
-            <a href="/tags/Node/" rel="tag">#Node</a>
+            <a href="/tags/Node/" rel="tag"># Node</a>
           
         </div>
+      
+
+      
+      
       
 
       
@@ -482,6 +508,8 @@ Angular-CLI">
               </a>
             
           </div>
+
+          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -496,6 +524,10 @@ Angular-CLI">
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -513,13 +545,6 @@ Angular-CLI">
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
   </div>
 
 
@@ -536,6 +561,7 @@ Angular-CLI">
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -551,25 +577,32 @@ Angular-CLI">
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
                alt="zaife" />
           <p class="site-author-name" itemprop="name">zaife</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">10</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -577,9 +610,11 @@ Angular-CLI">
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">7</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -597,7 +632,9 @@ Angular-CLI">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
@@ -606,7 +643,9 @@ Angular-CLI">
                   
                     <i class="fa fa-fw fa-twitter"></i>
                   
-                  Twitter
+                    
+                      Twitter
+                    
                 </a>
               </span>
             
@@ -615,7 +654,9 @@ Angular-CLI">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  Weibo
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -625,7 +666,7 @@ Angular-CLI">
         
         
           <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
@@ -634,19 +675,29 @@ Angular-CLI">
         
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NPM"><span class="nav-number">2.</span> <span class="nav-text">NPM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6"><span class="nav-number">3.</span> <span class="nav-text">ES6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeScript"><span class="nav-number">4.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zone-js"><span class="nav-number">5.</span> <span class="nav-text">Zone.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core-js"><span class="nav-number">6.</span> <span class="nav-text">core-js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rxjs"><span class="nav-number">7.</span> <span class="nav-text">rxjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SystemJS"><span class="nav-number">8.</span> <span class="nav-text">SystemJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reflect-metadata"><span class="nav-number">9.</span> <span class="nav-text">reflect-metadata</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular-CLI"><span class="nav-number">10.</span> <span class="nav-text">Angular-CLI</span></a></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -662,23 +713,25 @@ Angular-CLI">
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zaife</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
+
 
         
 
@@ -686,9 +739,13 @@ Angular-CLI">
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -711,82 +768,90 @@ Angular-CLI">
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/01/angularjs2_p_knowledge/';
-      var disqus_title = "AngularJS 2 预备知识";
-      var disqus_url = 'http://zaife.me/2016/07/01/angularjs2_p_knowledge/';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
-      
-    </script>
-  
 
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
   
 
   

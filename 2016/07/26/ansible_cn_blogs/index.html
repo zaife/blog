@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
@@ -29,9 +36,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,9 +75,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Ansible,自动部署," />
@@ -79,7 +89,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -87,11 +97,13 @@
 
 
 <meta name="description" content="Ansible学习资料整理，主要是整理网上Ansible的中文资料，便于开发学习和资料查找。">
+<meta name="keywords" content="Ansible,自动部署">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ansible学习资料整理">
 <meta property="og:url" content="http://zaife.me/2016/07/26/ansible_cn_blogs/index.html">
 <meta property="og:site_name" content="zaife的博客">
 <meta property="og:description" content="Ansible学习资料整理，主要是整理网上Ansible的中文资料，便于开发学习和资料查找。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2016-07-26T09:55:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ansible学习资料整理">
@@ -99,38 +111,48 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="http://zaife.me/2016/07/26/ansible_cn_blogs/"/>
 
-  <title> Ansible学习资料整理 | zaife的博客 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+
+
+  <title>Ansible学习资料整理 | zaife的博客</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-67371552-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -143,34 +165,44 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">zaife的博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zaife的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">zaife的技术说说</p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -190,28 +222,8 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -221,7 +233,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -237,6 +249,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -250,49 +264,68 @@
     
 
   
-  
 
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zaife.me/2016/07/26/ansible_cn_blogs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zaife">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/32269?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zaife的博客">
+    </span>
 
     
       <header class="post-header">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Ansible学习资料整理
-              
-            
-          </h1>
+          <h1 class="post-title" itemprop="name headline">Ansible学习资料整理</h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-26T00:00:00+08:00" content="2016-07-26">
-              2016-07-26
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-26T00:00:00+08:00">
+                2016-07-26
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ansible/" itemprop="url" rel="index">
                     <span itemprop="name">ansible</span>
                   </a>
@@ -300,33 +333,30 @@
 
                 
                 
-
               
             </span>
           
 
           
             
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/26/ansible_cn_blogs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/07/26/ansible_cn_blogs/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
           
 
           
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -336,92 +366,123 @@
         <p>Ansible学习资料整理，主要是整理网上Ansible的中文资料，便于开发学习和资料查找。</p>
 <a id="more"></a>
 <h3 id="运维之路博客"><a href="#运维之路博客" class="headerlink" title="运维之路博客"></a>运维之路博客</h3><ul>
-<li><a href="http://www.361way.com/ansible-install/4371.html" target="_blank" rel="external">ansible小结（一）ansible的安装</a></li>
-<li><a href="http://www.361way.com/ansible-framework/4393.html" target="_blank" rel="external">ansible小结（二）ansible架构</a></li>
-<li><a href="http://www.361way.com/ansible-inventory-patterns/4398.html" target="_blank" rel="external">ansible小结（三）Inventory与Patterns</a></li>
-<li><a href="http://www.361way.com/ansible-cfg/4401.html" target="_blank" rel="external">ansible小结（四）ansible.cfg与默认配置</a></li>
-<li><a href="http://www.361way.com/ansible-dynamic-inventory/4403.html" target="_blank" rel="external">ansible小结（五）Dynamic Inventory</a></li>
-<li><a href="http://www.361way.com/ad-hoc-commands-modules/4408.html" target="_blank" rel="external">ansible小结（六）Ad-hoc与commands模块</a></li>
-<li><a href="http://www.361way.com/ansible-modules/4415.html" target="_blank" rel="external">ansible小结（七）常用模块</a></li>
-<li><a href="http://www.361way.com/ansible-playbook-example/4441.html" target="_blank" rel="external">ansible小结（八）ansible-playbook简单使用</a></li>
-<li><a href="http://www.361way.com/playbook-advanced/4443.html" target="_blank" rel="external">ansible小结（九）playbook进阶</a></li>
-<li><a href="http://www.361way.com/ansible-api/4446.html" target="_blank" rel="external">ansible小结（十）ansible api</a></li>
-<li><a href="http://www.361way.com/ansible-su/4882.html" target="_blank" rel="external">ansible小结（十一）ansible普通用户su切换问题</a></li>
-<li><a href="http://www.361way.com/ansible-diskinfo/4995.html" target="_blank" rel="external">ansible小结（十 二）磁盘使用率筛选</a></li>
+<li><a href="http://www.361way.com/ansible-install/4371.html" target="_blank" rel="noopener">ansible小结（一）ansible的安装</a></li>
+<li><a href="http://www.361way.com/ansible-framework/4393.html" target="_blank" rel="noopener">ansible小结（二）ansible架构</a></li>
+<li><a href="http://www.361way.com/ansible-inventory-patterns/4398.html" target="_blank" rel="noopener">ansible小结（三）Inventory与Patterns</a></li>
+<li><a href="http://www.361way.com/ansible-cfg/4401.html" target="_blank" rel="noopener">ansible小结（四）ansible.cfg与默认配置</a></li>
+<li><a href="http://www.361way.com/ansible-dynamic-inventory/4403.html" target="_blank" rel="noopener">ansible小结（五）Dynamic Inventory</a></li>
+<li><a href="http://www.361way.com/ad-hoc-commands-modules/4408.html" target="_blank" rel="noopener">ansible小结（六）Ad-hoc与commands模块</a></li>
+<li><a href="http://www.361way.com/ansible-modules/4415.html" target="_blank" rel="noopener">ansible小结（七）常用模块</a></li>
+<li><a href="http://www.361way.com/ansible-playbook-example/4441.html" target="_blank" rel="noopener">ansible小结（八）ansible-playbook简单使用</a></li>
+<li><a href="http://www.361way.com/playbook-advanced/4443.html" target="_blank" rel="noopener">ansible小结（九）playbook进阶</a></li>
+<li><a href="http://www.361way.com/ansible-api/4446.html" target="_blank" rel="noopener">ansible小结（十）ansible api</a></li>
+<li><a href="http://www.361way.com/ansible-su/4882.html" target="_blank" rel="noopener">ansible小结（十一）ansible普通用户su切换问题</a></li>
+<li><a href="http://www.361way.com/ansible-diskinfo/4995.html" target="_blank" rel="noopener">ansible小结（十 二）磁盘使用率筛选</a></li>
 </ul>
 <h3 id="xiaorui博客"><a href="#xiaorui博客" class="headerlink" title="xiaorui博客"></a>xiaorui博客</h3><ul>
-<li><a href="http://xiaorui.cc/tag/ansible/" target="_blank" rel="external">Ansible相关</a></li>
-<li><a href="http://xiaorui.cc/tag/ansible-api/" target="_blank" rel="external">Ansible API 相关</a></li>
+<li><a href="http://xiaorui.cc/tag/ansible/" target="_blank" rel="noopener">Ansible相关</a></li>
+<li><a href="http://xiaorui.cc/tag/ansible-api/" target="_blank" rel="noopener">Ansible API 相关</a></li>
 </ul>
 <h3 id="灿哥的Blog"><a href="#灿哥的Blog" class="headerlink" title="灿哥的Blog"></a>灿哥的Blog</h3><ul>
-<li><a href="http://www.shencan.net/index.php/2015/07/08/run-ansible-and-saltstack-on-jenkins/" target="_blank" rel="external">Run Ansible and SaltStack on Jenkins</a></li>
-<li><a href="http://www.shencan.net/index.php/2015/02/14/run-ansible-through-jumpbox-machine/" target="_blank" rel="external">Run Ansible Through Jumpbox Machine</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/08/13/ansible-and-aws/" target="_blank" rel="external">Ansible and AWS</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/08/01/ansible-multiple-inventory-file-test/" target="_blank" rel="external">Ansible multiple Inventory file test</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/07/18/ansible-playbook%e4%b8%ad%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8%e5%a4%a7%e5%85%a8/" target="_blank" rel="external">ansible playbook中的迭代器大全</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/07/17/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins-%ef%bc%88%e5%ae%9e%e6%88%98%ef%bc%89/" target="_blank" rel="external">ansible 插件之callback_plugins （实战）</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/07/07/ansible%e6%8f%92%e4%bb%b6%e4%b9%8b-lookup_plugins/" target="_blank" rel="external">ansible插件之 lookup_plugins</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/06/16/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins/" target="_blank" rel="external">ansible 插件之callback_plugins</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/05/22/ansible-%e5%8a%a8%e6%80%81inventory/" target="_blank" rel="external">ansible 动态Inventory</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/05/17/ansible-%e8%87%aa%e5%ae%9a%e4%b9%89-facts/" target="_blank" rel="external">ansible 自定义 facts</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/04/10/ansible-%e5%a5%bd%e5%9f%ba%e5%8f%8b-ansible-shell/" target="_blank" rel="external">ansible 好基友 ansible-shell</a></li>
-<li><a href="http://www.shencan.net/index.php/2014/02/22/ansible%e4%b8%89-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97/" target="_blank" rel="external">ansible(三) 自定义模块</a></li>
-<li><a href="http://www.shencan.net/index.php/2013/09/03/ansible%e4%ba%8c-%e7%ae%a1%e7%90%86%e5%85%a8%e7%bd%91haproxy%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6/" target="_blank" rel="external">ansible(二) 管理全网haproxy配置文件</a></li>
-<li><a href="http://www.shencan.net/index.php/2013/09/02/ansible-%e5%88%9d%e4%bd%93%e9%aa%8c/" target="_blank" rel="external">ansible 初体验</a></li>
+<li><a href="http://www.shencan.net/index.php/2015/07/08/run-ansible-and-saltstack-on-jenkins/" target="_blank" rel="noopener">Run Ansible and SaltStack on Jenkins</a></li>
+<li><a href="http://www.shencan.net/index.php/2015/02/14/run-ansible-through-jumpbox-machine/" target="_blank" rel="noopener">Run Ansible Through Jumpbox Machine</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/08/13/ansible-and-aws/" target="_blank" rel="noopener">Ansible and AWS</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/08/01/ansible-multiple-inventory-file-test/" target="_blank" rel="noopener">Ansible multiple Inventory file test</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/18/ansible-playbook%e4%b8%ad%e7%9a%84%e8%bf%ad%e4%bb%a3%e5%99%a8%e5%a4%a7%e5%85%a8/" target="_blank" rel="noopener">ansible playbook中的迭代器大全</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/17/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins-%ef%bc%88%e5%ae%9e%e6%88%98%ef%bc%89/" target="_blank" rel="noopener">ansible 插件之callback_plugins （实战）</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/07/07/ansible%e6%8f%92%e4%bb%b6%e4%b9%8b-lookup_plugins/" target="_blank" rel="noopener">ansible插件之 lookup_plugins</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/06/16/ansible-%e6%8f%92%e4%bb%b6%e4%b9%8bcallback_plugins/" target="_blank" rel="noopener">ansible 插件之callback_plugins</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/05/22/ansible-%e5%8a%a8%e6%80%81inventory/" target="_blank" rel="noopener">ansible 动态Inventory</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/05/17/ansible-%e8%87%aa%e5%ae%9a%e4%b9%89-facts/" target="_blank" rel="noopener">ansible 自定义 facts</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/04/10/ansible-%e5%a5%bd%e5%9f%ba%e5%8f%8b-ansible-shell/" target="_blank" rel="noopener">ansible 好基友 ansible-shell</a></li>
+<li><a href="http://www.shencan.net/index.php/2014/02/22/ansible%e4%b8%89-%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97/" target="_blank" rel="noopener">ansible(三) 自定义模块</a></li>
+<li><a href="http://www.shencan.net/index.php/2013/09/03/ansible%e4%ba%8c-%e7%ae%a1%e7%90%86%e5%85%a8%e7%bd%91haproxy%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6/" target="_blank" rel="noopener">ansible(二) 管理全网haproxy配置文件</a></li>
+<li><a href="http://www.shencan.net/index.php/2013/09/02/ansible-%e5%88%9d%e4%bd%93%e9%aa%8c/" target="_blank" rel="noopener">ansible 初体验</a></li>
 </ul>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li><a href="https://segmentfault.com/a/1190000002927314" target="_blank" rel="external">基于 ANSIBLE 自动化运维实践</a></li>
-<li><a href="http://ansible-tran.readthedocs.io/en/latest/index.html" target="_blank" rel="external">中文指南</a></li>
-<li><a href="https://ansible-book.gitbooks.io/ansible-first-book/content/" target="_blank" rel="external">Ansible入门</a></li>
-<li><a href="http://ansible.richard.zone/" target="_blank" rel="external">Ansible Workshop</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/linux/1502_lih_ansible/" target="_blank" rel="external">使用 Ansible 管理 MySQL 复制</a></li>
-<li><a href="https://zespia.tw/blog/2016/02/01/ansible-gce/" target="_blank" rel="external">使用 Ansible 管理 Google Compute Engine</a></li>
+<li><a href="https://segmentfault.com/a/1190000002927314" target="_blank" rel="noopener">基于 ANSIBLE 自动化运维实践</a></li>
+<li><a href="http://ansible-tran.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">中文指南</a></li>
+<li><a href="https://ansible-book.gitbooks.io/ansible-first-book/content/" target="_blank" rel="noopener">Ansible入门</a></li>
+<li><a href="http://ansible.richard.zone/" target="_blank" rel="noopener">Ansible Workshop</a></li>
+<li><a href="http://www.ibm.com/developerworks/cn/linux/1502_lih_ansible/" target="_blank" rel="noopener">使用 Ansible 管理 MySQL 复制</a></li>
+<li><a href="https://zespia.tw/blog/2016/02/01/ansible-gce/" target="_blank" rel="noopener">使用 Ansible 管理 Google Compute Engine</a></li>
 </ul>
 <h3 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h3><ul>
-<li><a href="http://docs.ansible.com/ansible/index.html" target="_blank" rel="external">Ansible</a></li>
+<li><a href="http://docs.ansible.com/ansible/index.html" target="_blank" rel="noopener">Ansible</a></li>
 </ul>
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
-      
-    </div>
+    
 
-    <div>
-      
-        
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/IMG_5231.JPG" alt="zaife WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/IMG_5232.JPG" alt="zaife Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/Ansible/" rel="tag">#Ansible</a>
+            <a href="/tags/Ansible/" rel="tag"># Ansible</a>
           
-            <a href="/tags/自动部署/" rel="tag">#自动部署</a>
+            <a href="/tags/自动部署/" rel="tag"># 自动部署</a>
           
         </div>
+      
+
+      
+      
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/22/ansible_intro/" rel="next" title="Ansible介绍">
-                <i class="fa fa-chevron-left"></i> Ansible介绍
+              <a href="/2016/07/26/ssh_no_pass/" rel="next" title="ssh 无密码登录">
+                <i class="fa fa-chevron-left"></i> ssh 无密码登录
               </a>
             
           </div>
 
+          <span class="post-nav-divider"></span>
+
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/07/26/ssh_no_pass/" rel="prev" title="ssh 无密码登录">
-                ssh 无密码登录 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/27/ansible_inventory/" rel="prev" title="Ansible Inventory学习">
+                Ansible Inventory学习 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -431,6 +492,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -448,13 +513,6 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
   </div>
 
 
@@ -471,6 +529,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -486,25 +545,32 @@
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
                alt="zaife" />
           <p class="site-author-name" itemprop="name">zaife</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">10</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-categories">
-              <a href="/categories">
+              <a href="/categories/index.html">
                 <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
@@ -512,9 +578,11 @@
           
 
           
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">7</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -532,7 +600,9 @@
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
@@ -541,7 +611,9 @@
                   
                     <i class="fa fa-fw fa-twitter"></i>
                   
-                  Twitter
+                    
+                      Twitter
+                    
                 </a>
               </span>
             
@@ -550,7 +622,9 @@
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  Weibo
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -560,7 +634,7 @@
         
         
           <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
               <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
             </a>
           </div>
@@ -569,19 +643,29 @@
         
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#运维之路博客"><span class="nav-number">1.</span> <span class="nav-text">运维之路博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xiaorui博客"><span class="nav-number">2.</span> <span class="nav-text">xiaorui博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#灿哥的Blog"><span class="nav-number">3.</span> <span class="nav-text">灿哥的Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#官网"><span class="nav-number">5.</span> <span class="nav-text">官网</span></a></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
+      
+
       
 
     </div>
@@ -597,23 +681,25 @@
         <div class="copyright" >
   
   &copy;  2014 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">zaife</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
+
 
         
 
@@ -621,9 +707,13 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -646,82 +736,90 @@
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'zaifeme';
-      var disqus_identifier = '2016/07/26/ansible_cn_blogs/';
-      var disqus_title = "Ansible学习资料整理";
-      var disqus_url = 'http://zaife.me/2016/07/26/ansible_cn_blogs/';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
-      
-    </script>
-  
 
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
   
 
   
