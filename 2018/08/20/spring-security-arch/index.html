@@ -105,7 +105,7 @@
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Spring Security和Apache Shiro是目前使用比较多的开源权限框架。比较来说，Spring Security是基于Spring framework体系的，和Spring框架整合方便。Apache Shiro框架比较灵活，自定义方便。总的来说，如果是需要深度定制的权限框架，两者都是需要">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://zaife.me/images/security/authentication.png">
-<meta property="og:updated_time" content="2018-09-13T03:42:12.386Z">
+<meta property="og:updated_time" content="2018-09-13T13:38:05.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Security 研究(1)-架构">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Spring Security和Apache Shiro是目前使用比较多的开源权限框架。比较来说，Spring Security是基于Spring framework体系的，和Spring框架整合方便。Apache Shiro框架比较灵活，自定义方便。总的来说，如果是需要深度定制的权限框架，两者都是需要">
@@ -396,7 +396,9 @@
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 <h2 id="Spring-Security架构"><a href="#Spring-Security架构" class="headerlink" title="Spring Security架构"></a>Spring Security架构</h2><p><a href="https://spring.io/guides/topicals/spring-security-architecture/" target="_blank" rel="noopener">官方文档</a><br>Spring Security有一个旨在将认证与授权分开的体系结构，并兼备多种策略和扩展点。</p>
+<p><a href="http://www.spring4all.com/article/433" target="_blank" rel="noopener">中文翻译</a></p>
 <h3 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h3><p><img src="/images/security/authentication.png" alt=""><br>认证的核心接口是 <code>AuthenticationManager</code>，它包含如下接口</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AuthenticationManager</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function">Authentication <span class="title">authenticate</span><span class="params">(Authentication authentication)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> AuthenticationException</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>一个<code>AuthenticationManager</code>,需要在<code>authenticate()</code>中实现下列行为之一:</p>
